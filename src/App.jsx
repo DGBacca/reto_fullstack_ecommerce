@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/templates/MainLayout';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
@@ -16,7 +16,7 @@ export default function App() {
   }, [fetchProducts]);
 
   return (
-    <BrowserRouter basename="/reto_fullstack_ecommerce/">
+    <HashRouter>
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,6 +26,6 @@ export default function App() {
           <Route path="/auth" element={<Auth />} />
         </Routes>
       </MainLayout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
