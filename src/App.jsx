@@ -16,7 +16,7 @@ export default function App() {
   }, [fetchProducts]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/reto_fullstack_ecommerce/">
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
